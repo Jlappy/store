@@ -1,0 +1,132 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff; // trắng
+  padding: 1rem 2rem;
+  color: #1e1e1e;
+  position: relative;
+  font-family: 'Nunito Sans', sans-serif;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #1e1e1e;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 40px;
+
+    .navbar__logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-family: 'Montserrat', sans-serif;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    input {
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: transparent;
+      outline: none;
+      width: 200px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    button {
+      padding: 0 1rem;
+      border: none;
+      background-color: transparent;
+      color: #333;
+      font-size: 16px;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+
+    .navbar__icon {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      gap: 0.5rem;
+      font-size: 14px;
+      color: #333;
+      position: relative;
+
+      span {
+        display: none;
+
+        @media (min-width: 600px) {
+          display: inline;
+        }
+      }
+
+      &:hover {
+        color: #000;
+      }
+
+      &.navbar__account {
+        &:hover .dropdown {
+          display: block;
+        }
+
+        .dropdown {
+          display: none;
+          position: absolute;
+          top: 130%;
+          left: 0;
+          background-color: #ffffff;
+          color: #1e2a38;
+          border-radius: 6px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          padding: 0.5rem 0;
+          min-width: 160px;
+          z-index: 1000;
+
+          li {
+            list-style: none;
+
+            a {
+              display: block;
+              padding: 0.75rem 1rem;
+              color: #1e2a38;
+              text-decoration: none;
+              font-size: 14px;
+              transition: background 0.2s;
+
+              &:hover {
+                background-color: #f6f6f6;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
