@@ -1,0 +1,4 @@
+<button [ngClass]="color" (click)="onClick.emit()">
+    <mat-icon *ngIf="icon">{{icon}}</mat-icon>
+    {{label}}
+</button>

@@ -1,0 +1,25 @@
+form {
+  width: 100%;
+  max-width: 400px;
+  margin: 80px auto; // căn giữa theo chiều ngang và đẩy xuống một chút
+  padding: 2rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .mat-form-field {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
+// Responsive nhỏ gọ
